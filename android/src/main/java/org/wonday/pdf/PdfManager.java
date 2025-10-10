@@ -99,6 +99,11 @@ public class PdfManager extends SimpleViewManager<PdfView> implements RNPDFPdfVi
         // NOOP on Android
     }
 
+	@Override
+    public void setShowsVerticalScrollIndicator(PdfView view, boolean value) {
+        // NOOP on Android
+    }
+
     @ReactProp(name = "enableRTL")
   @Override
     public void setShowsVerticalScrollIndicator(PdfView view, boolean value) {
@@ -138,11 +143,6 @@ public class PdfManager extends SimpleViewManager<PdfView> implements RNPDFPdfVi
     @ReactProp(name = "enablePaging")
     public void setEnablePaging(PdfView pdfView, boolean enablePaging) {
         pdfView.setEnablePaging(enablePaging);
-    }
-
-    @Override
-    public void setEnableRTL(PdfView view, boolean value) {
-        // NOOP on Android
     }
 
     @ReactProp(name = "fitPolicy")

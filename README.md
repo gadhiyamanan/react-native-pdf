@@ -85,7 +85,7 @@ react-native link react-native-pdf
 
 ### Windows installation
 <details>
-  <sumary>Windows details</summary>
+  <summary>Windows details</summary>
 
 - Open your solution in Visual Studio 2019 (eg. `windows\yourapp.sln`)
 - Right-click Solution icon in Solution Explorer > Add > Existing Project...
@@ -168,6 +168,13 @@ react-native run-ios
 ### ChangeLog
 <details>
   <summary>ChangeLog details</summary>
+v7.0.1
+1. Fixed: not rendering on iOS
+2. Added: Android 16 KB Page Size support
+3. Fixed: crash issue in io.legere:pdfiumandroid that occurred due to multithreading
+4. Added: Upgrade Fabric Example to Latest React Native 0.81.0
+5. Added: support RTL android
+
 v6.7.7
 1. Added: add support for customizable scroll indicators in PdfView component (#904)
 2. Fixed: fix field values not being visible on android. issue #864 :bug: (#896)
@@ -328,7 +335,7 @@ const styles = StyleSheet.create({
 | style                          |                            object                             | {backgroundColor:"#eee"} | support normal view style, you can use this to set border/spacing color...                                                                                                    | ✔   | ✔       | ✔                           | <3.0 
 | progressContainerStyle         |                            object                             | {backgroundColor:"#eee"} | support normal view style, you can use this to set border/spacing color...                                                                                             | ✔   | ✔       | ✔                           | 6.9.0                     |
 | renderActivityIndicator        |                    (progress) => Component                    |      <ProgressBar/>      | when loading show it as an indicator, you can use your component                                                                                                              | ✔   | ✔       | ✖                           | <3.0                     |
-| enableAntialiasing             |                             bool                              |           true           | improve rendering a little bit on low-res screens, but maybe course some problem on Android 4.4, so add a switch                                                              | ✖   | ✔       | ✖                           | <3.0                     |
+| enableAntialiasing             |                             bool                              |           true           | improve rendering a little bit on low-res screens, but maybe cause some problem on Android 4.4, so add a switch                                                              | ✖   | ✔       | ✖                           | <3.0                     |
 | enablePaging                   |                             bool                              |          false           | only show one page in screen                                                                                                                                                  | ✔   | ✔       | ✔                           | 5.0.1                    |
 | enableRTL                      |                             bool                              |          false           | scroll page as "page3, page2, page1"                                                                                                                                          | ✔   | ✖       | ✔                           | 5.0.1                    |
 | enableAnnotationRendering      |                             bool                              |           true           | enable rendering annotation, notice:iOS only support initial setting,not support realtime changing                                                                            | ✔   | ✔       | ✖                           | 5.0.3                    |
